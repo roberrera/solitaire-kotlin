@@ -11,4 +11,6 @@ val spades = "Spades"
 val redSuits = arrayOf(diamonds, hearts)
 val blackSuits = arrayOf(clubs, spades)
 
-class Card(val value: Int, val suit: String, var faceUp: Boolean = false)
+// Data classes provide a toString() method, and the = symbol is based on its constructor args
+// If the cards have the same properties, they will be considered equal (even if they are different objects).
+data class Card(val value: Int, val suit: String, var faceUp: Boolean = false)
